@@ -21,6 +21,7 @@ export interface FilterProps {
   model?: string;
   limit?: number;
   fuel?: string;
+  make?: string;
 }
 
 export interface HomeProps {
@@ -43,7 +44,7 @@ export interface CustomButtonProps {
   containerStyles?: string;
   textStyles?: string;
   title: string;
-  rightIcon?: string;
+  rightIcon?: any;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
