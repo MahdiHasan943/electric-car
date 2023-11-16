@@ -5,6 +5,7 @@ import { fetchCars } from '@/utils'
 import { fuels,yearsOfProduction  } from '@/constant';
 
 import Image from 'next/image'
+import ShowMore from '@/components/ShowMore';
 
 export default async function  Home({ searchParams }: HomeProps)  {
 
@@ -46,10 +47,10 @@ export default async function  Home({ searchParams }: HomeProps)  {
               ))}
             </div>
 
-            {/* <ShowMore
+            <ShowMore
               pageNumber={(searchParams.limit || 10) / 10}
               isNext={(searchParams.limit || 10) > allCars.length}
-            /> */}
+            />
           </section>
         ) : (
           <div className='home__error-container'>

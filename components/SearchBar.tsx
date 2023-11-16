@@ -10,6 +10,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
       alt={"magnifying glass"}
       width={40}
       height={40}
+
       
       className='object-contain'
     />
@@ -53,7 +54,7 @@ const SearchBar = () => {
     // Generate the new pathname with the updated search parameters
     const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
 
-    router.push(newPathname);
+    router.push(newPathname, { scroll: false });
   };
   
   return (
@@ -83,7 +84,7 @@ const SearchBar = () => {
       />
       <SearchButton otherClasses='sm:hidden' />
     </div>
-    <SearchButton otherClasses='max-sm:hidden' />
+    <SearchButton  otherClasses='max-sm:hidden' />
   </form>  )
 }
 
