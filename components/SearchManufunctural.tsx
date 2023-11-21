@@ -6,7 +6,7 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
 import React, {Fragment, useState } from "react";
 import { manufacturers } from "@/constant";
-const SearchManufunctural = ({ manufacturer, setManufacturer }: SearchManuFacturerProps) => {
+const SearchManufunctural = ({ selected, setSelected }: SearchManuFacturerProps) => {
     const [query, setQuery] = useState("");
   
     const filteredManufacturers =
@@ -21,7 +21,7 @@ const SearchManufunctural = ({ manufacturer, setManufacturer }: SearchManuFactur
   
     return (
       <div className='search-manufacturer'>
-        <Combobox value={manufacturer} onChange={setManufacturer}>
+        <Combobox value={selected} onChange={setSelected}>
           <div className='relative w-full'>
             {/* Button for the combobox. Click on the icon to see the complete dropdown */}
             <Combobox.Button className='absolute  top-[14px]'>
